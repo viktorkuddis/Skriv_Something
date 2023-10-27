@@ -15,6 +15,7 @@ body {
     background-color: var(--color1);
     color: var(--white);
     font-family: Tahoma, Verdana, Geneva, sans-serif;
+    text-align: center;
 
     display: flex;
 
@@ -27,10 +28,18 @@ article {
     background-color: var(--color2);
     padding: 2rem 4rem;
     border-radius: 0.5rem;
+    width: min(50vw, 500px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .printruta {
     display: none;
+    text-align: left;
     font-family: Courier, 'Courier New', monospace;
     background-color: var(--accent-color);
     padding: 1rem;
@@ -38,9 +47,8 @@ article {
     border-radius: 0.3rem;
 }
 
-button {
-    display: none;
-
+button,
+.submit {
     border: none;
     padding: 0.5rem;
     border-radius: 0.5rem;
@@ -50,6 +58,32 @@ button {
 
     &:hover {
         cursor: pointer;
+    }
+}
+
+.submit,
+#textruta,
+button {
+    height: 2rem;
+}
+
+button {
+    display: none;
+}
+
+
+@media (max-width:770px) {
+
+    article {
+        padding: 1rem;
+        margin: 0.5rem;
+        width: 50vw;
+        min-width: 300px;
+    }
+
+    form {
+        margin: 0px 1rem;
+        border-radius: 0.5rem;
     }
 
 }
